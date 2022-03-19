@@ -3,14 +3,11 @@
   "version": "0.0.1",
   "scripts": {
     "serve:dev": "cross-env NODE_ENV=development vite --host --mode development",
-    "build:prod": "cross-env NODE_ENV=production vite build --mode production",
-    "test":"jest",
-    "preview": "vite preview"
+    "build:prod": "tsup lib/index.ts",
+    "test":"jest"
   },
   "dependencies": {
-
-
-
+    "tsup": "^5.12.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",

@@ -12,7 +12,7 @@ describe('vite-plugin-svg-transform-script', () => {
         expect(camelize(testStr)).toBe('aaaaVvvv')
     })
     test('test-findSvgFile ', () => {
-        const fileInfo:Array<ISvgCtxItem> = findSvgFile(path.resolve() + '/src/__test__/')
+        const fileInfo:Array<ISvgCtxItem> = findSvgFile(path.resolve() + '/lib/__test__/')
         expect(fileInfo[0].name).toBe('account-book')
     })
 })
