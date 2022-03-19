@@ -5,8 +5,8 @@ export default defineConfig({
   plugins: [
     transformScript({
       input:'./public/icon/',
-      type:'ts',
-      format:'default'
+      type:'js',
+      format:'export'
     })
   ], /**
    * 在生产中服务时的基本公共路径。
