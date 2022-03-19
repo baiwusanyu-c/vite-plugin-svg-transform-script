@@ -1,9 +1,10 @@
 import {defineConfig} from 'vite'
-import {transformScript} from "./src";
+import {transformScript} from "./lib";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     transformScript({
+      //input:'./public/icon/',
       input:'./public/icon/',
       type:'js',
       format:'export'
@@ -21,7 +22,7 @@ export default defineConfig({
   // 配置库打包
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: './lib/index.ts',
       formats: ['es', 'cjs'],
     }
   },

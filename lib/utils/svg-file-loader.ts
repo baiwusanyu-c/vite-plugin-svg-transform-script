@@ -19,6 +19,7 @@ export const findSvgFile = (dir:string):Array<ISvgCtxItem> =>{
         withFileTypes: true
     })
     for (const dirent of readInst) {
+        if(!(/.svg/.test(dirent.name))) continue
         if (dirent.isDirectory()) {
             svgRes.push(...findSvgFile(dir + dirent.name + '/'))
         } else {
