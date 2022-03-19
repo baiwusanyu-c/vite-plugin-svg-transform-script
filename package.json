@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svg-transform-script",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "serve:dev": "cross-env NODE_ENV=development vite --host --mode development",
     "build:prod": "tsup lib/index.ts",
