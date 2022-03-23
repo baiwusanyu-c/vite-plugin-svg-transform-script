@@ -5,7 +5,7 @@
 import {camelize} from "../utils/parser";
 import {findSvgFile} from "../utils/svg-file-loader";
 import path from 'path'
-import {ISvgCtxItem} from "../types";
+import {ISvgCtxItem} from "../index.d";
 describe('vite-plugin-svg-transform-script', () => {
     test('test-camelize ', () => {
         const testStr = 'aaaa-vvvv'

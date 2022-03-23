@@ -6,6 +6,7 @@ export default defineConfig({
     transformScript({
       //input:'./public/icon/',
       input:'./public/icon/',
+      // output:'./lib/',
       type:'js',
       format:'export'
     })
