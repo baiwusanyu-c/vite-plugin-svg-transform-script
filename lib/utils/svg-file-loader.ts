@@ -6,7 +6,7 @@
 */
 import {readFileSync, readdirSync} from 'fs'
 import {camelize} from "./parser";
-import {ISvgCtxItem} from "../types";
+import {ISvgCtxItem} from "../types/types";
 
 const svgTitle:RegExp = /<svg([^>+].*?)>/
 const clearHeightWidth:RegExp = /(width|height)="([^>+].*?)"/g

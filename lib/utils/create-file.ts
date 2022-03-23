@@ -7,7 +7,7 @@
 // 拼接脚本内容
 import {camelize} from "./parser";
 import {writeFile,exists,mkdir} from 'fs'
-import {ISvgCtxItem} from "../types";
+import {ISvgCtxItem} from "../types/types";
 import * as path from "path";
 /**
  * 生成脚本文件
@@ -18,7 +18,7 @@ import * as path from "path";
  * @param format 生成文件导出类型 export 逐个个导出或default 为export default 多个导出
  */
 
-export function createFile(outputPath:string = path.resolve(),fileName:string = 'svg-dict',type='ts',format='default',svgCtx:Array<ISvgCtxItem>){
+export function createFile(outputPath:string = path.resolve(),fileName:string = 'svg-dict',type='ts',format='default',svgCtx:Array<ISvgCtxItem>):void{
     let scriptContent:string = ``
     // export 下导出
     let exportMainContent:string = ''
@@ -49,20 +49,22 @@ export function createFile(outputPath:string = path.resolve(),fileName:string = 
     /**
      * 生成脚本文件
      */
-    exists(outputPath,  function(exists:boolean) {
-        if(!exists){
+    exists(outputPath,  function(isExist:boolean) {
+        if(!isExist){
              mkdir(outputPath,()=>{
-                 writeFile(fileName + '.' + type,scriptContent,function (err){
+                 writeFile(fileName + '.' + type,scriptContent,function (err:any){
                      if(err) {
-                         return console.log(err);
+                         console.log(err);
+                         return
                      }
                      console.log("The file was saved!");
                  })
              })
         }else{
-            writeFile(fileName + '.' + type,scriptContent,function (err){
+            writeFile(outputPath + fileName + '.' + type,scriptContent,function (err:any){
                 if(err) {
-                    return console.log(err);
+                    console.log(err);
+                    return
                 }
                 console.log("The file was saved!");
             })
