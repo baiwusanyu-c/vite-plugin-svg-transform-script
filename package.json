@@ -1,9 +1,9 @@
 {
   "name": "vite-plugin-svg-transform-script",
-  "version": "0.0.7",
+  "version": "0.1.4",
   "scripts": {
     "serve:dev": "vite --host --mode development",
-    "build:prod": "tsup lib/index.ts",
+    "build:prod": "tsup lib/index.ts --format esm,cjs,iife && tsup lib/index.ts --dts",
     "test":"jest"
   },
   "dependencies": {

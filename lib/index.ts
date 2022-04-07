@@ -7,3 +7,4 @@
 export { findSvgFile } from "./utils/svg-file-loader";
 export { createFile } from "./utils/create-file";
 export { transformScript } from "./utils/core";
+export { loadSvg } from "./utils/load-svg";

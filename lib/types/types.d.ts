@@ -15,3 +15,14 @@ export declare interface ISvgCtxItem {
     name: string
     svg: string
 }
+export interface ISVGDict {
+    [key:string]:string
+}
+export interface ISvgLoad {
+    svgElm: SVGSVGElement
+    isAllLoad:boolean
+    svgDict:ISVGDict
+    loadIconXML:()=>{}
+    loadAllIconXML:()=>{}
+    appendToBody:()=>{}
+}
