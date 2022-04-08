@@ -35,11 +35,12 @@ export const content1 = <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLI
 export const content2 = <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN".............. '
 ````
 ## Api
-|  Method name   |  explain   | parameter  | return value |
-|  ---- |  ----  | ----  | ----  | 
-| transformScript | Generate a script file based on the passed in configuration parameters| ISvgTransScriptOption | void |
-|  findSvgFile |  Search SVG files in the specified folder according to the incoming parameters  | dir:String Svg file path| Array<{name:String,svg:String}><br>fileName：Humped SVG file name<br>svg:InnerHTML corresponding to SVG file| 
-|  createFile |  Generate SVG script of specified directory according to the passed in parameters  | outputPath:String Specified output path<br>fileName:String Specified output file name <br>svgData:Array<{name:String,svg:String} Return value of 'findSvgFile' method| void|
+|  Method name   |  explain   | parameter                                                                                                                                                      | return value |
+|  ---- |  ----  |----------------------------------------------------------------------------------------------------------------------------------------------------------------| ----  | 
+| transformScript | Generate a script file based on the passed in configuration parameters| ISvgTransScriptOption                                                                                                                                          | void |
+|  findSvgFile |  Search SVG files in the specified folder according to the incoming parameters  | dir:String Svg file path                                                                                                                                       | Array<{name:String,svg:String}><br>fileName：Humped SVG file name<br>svg:InnerHTML corresponding to SVG file| 
+|  createFile |  Generate SVG script of specified directory according to the passed in parameters  | outputPath:String Specified output path<br>fileName:String Specified output file name <br>svgData:Array<{name:String,svg:String} Return value of 'findSvgFile' method | void|
+| loadsvg         | Insert the SVG element to the top of the body | `svg-dict` object generated in default format   | void |
 ## Interface
 ### ISvgTransScriptOption
 |  key   |  explain   | default value  | required |

@@ -45,11 +45,12 @@ export const content1 = <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLI
 export const content2 = <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN".............. '
 ````
 ## Api
-|  方法名称   |  说明   | 参数  | 返回 |
-|  ---- |  ----  | ----  | ----  | 
-| transformScript | 根据传入配置参数生成脚本文件| ISvgTransScriptOption | void |
-|  findSvgFile |  根据传入参数，搜索指定文件夹内svg文件  | dir:String svg文件路径| Array<{name:String,svg:String}><br>fileName：驼峰化的svg文件名<br>svg:对应svg文件的innerHTML| 
-|  createFile |  根据传入参数，生成指定目录svg脚本  | outputPath:String 指定的输出路径<br>fileName:String 指定的输出文件名 <br>svgData:Array<{name:String,svg:String} findSvgFile的返回值| void|
+| 方法名称            | 说明                   | 参数                                                                                                              | 返回 |
+|-----------------|----------------------|-----------------------------------------------------------------------------------------------------------------| ----  | 
+| transformScript | 根据传入配置参数生成脚本文件       | ISvgTransScriptOption                                                                                           | void |
+| findSvgFile     | 根据传入参数，搜索指定文件夹内svg文件 | dir:String svg文件路径                                                                                              | Array<{name:String,svg:String}><br>fileName：驼峰化的svg文件名<br>svg:对应svg文件的innerHTML| 
+| createFile      | 根据传入参数，生成指定目录svg脚本   | outputPath:String 指定的输出路径<br>fileName:String 指定的输出文件名 <br>svgData:Array<{name:String,svg:String} findSvgFile的返回值 | void|
+| loadsvg         | 将svg插入到body顶端        | 以default格式生成的svg-dict脚本对象| void |
 ## Interface
 ### ISvgTransScriptOption
 |  key   |  说明   | 默认值  | required |

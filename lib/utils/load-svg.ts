@@ -6,7 +6,7 @@
 */
 import {ISVGDict} from "../types/types";
 
- export class svgLoad {
+ export class SVGLoadInstance {
   private svgElm: SVGSVGElement
   private isAllLoad:boolean = true
   private svgDict:ISVGDict
@@ -39,6 +39,6 @@ import {ISVGDict} from "../types/types";
   }
 }
 
-export function loadSvg(svgDict:ISVGDict):svgLoad{
-  return new svgLoad(svgDict)
+export const loadSvg = (svgDict:ISVGDict):SVGLoadInstance =>{
+  return new SVGLoadInstance(svgDict)
 }

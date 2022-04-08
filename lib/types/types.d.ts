@@ -18,6 +18,7 @@ export declare interface ISvgCtxItem {
 export interface ISVGDict {
     [key:string]:string
 }
+/*
 export interface ISvgLoad {
     svgElm: SVGSVGElement
     isAllLoad:boolean
@@ -25,4 +26,4 @@ export interface ISvgLoad {
     loadIconXML:()=>{}
     loadAllIconXML:()=>{}
     appendToBody:()=>{}
-}
+}*/
